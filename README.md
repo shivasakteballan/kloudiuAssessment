@@ -62,36 +62,55 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+## Requirements:
 
-Now that you have successfully run the app, let's make changes!
+1. Authentication Context Setup
+• Implement a AuthContext using React's Context API to manage the global (Done)
+authentication state.
+• The context should include:
+o login: A function to log in a user. (Done)
+o signup: A function to create a new user. (Done)
+o logout: A function to log out the user. (Done)
+o user: State to store the currently logged-in user's information. (Done)
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+1. Screens
+2. Login Screen:
+o Include input fields for:
+§ Email (Done)
+§ Password (Done)
+o A "Login" button that triggers the login function from the AuthContext. (Done)
+o Show error messages for:
+§ Invalid email/password format. (Done)
+§ Incorrect credentials. (Done)
+o A "Go to Signup" button to navigate to the Signup screen. (Done)
+1. Signup Screen:
+o Include input fields for: (Done)
+§ Name
+§ Email
+§ Password
+o A "Signup" button that triggers the signup function from the AuthContext. (Done)
+o Show error messages for:
+§ Missing fields. (Done)
+§ Invalid email format. (Done)
+§ Password length less than 6 characters. (Done)
+o A "Go to Login" button to navigate back to the Login screen. (Done)
+1. Home Screen:
+o Display the currently logged-in user's name and email. (Done)
+o A "Logout" button to log out the user and return to the Login screen (Done)
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+1. Persist Authentication (optional)
+• Use AsyncStorage to persist the authentication state so that the user remains logged in
+after the app is closed and reopened. (Done)
+1. Navigation
+• Use React Navigation to manage navigation between:
+o Login Screen (Done)
+o Signup Screen (Done)
+o Home Screen (Done)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+1. UI Design
+• Make the app visually appealing with clear layouts and intuitive navigation. (Done)
+• Use appropriate styles for input fields, buttons, and error messages. (Done)
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Bonus Tasks (Optional)
+1. Password Visibility Toggle:
+o Add an eye icon to toggle the visibility of the password field. (Done)
