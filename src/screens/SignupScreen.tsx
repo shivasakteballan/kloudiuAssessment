@@ -71,7 +71,7 @@ export const SignupScreen: React.FC<SignupScreenProps> = () => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.formContainer}>
           <Text style={styles.title}>Create Account</Text>
-          <Text style={styles.subtitle}>Sign up to get started</Text>
+          <Text style={styles.subtitle}>Signup to get started</Text>
 
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Full Name</Text>
@@ -126,13 +126,13 @@ export const SignupScreen: React.FC<SignupScreenProps> = () => {
             onPress={handleSignup}
             disabled={isLoading}
           >
-            <Text style={styles.buttonText}>{isLoading ? "Creating Account..." : "Sign Up"}</Text>
+            <Text style={styles.buttonText}>{isLoading ? "Creating Account..." : "Signup"}</Text>
           </TouchableOpacity>
 
           <View style={styles.loginContainer}>
             <Text style={styles.loginText}>Already have an account? </Text>
             <TouchableOpacity onPress={onNavigateToLogin}>
-              <Text style={styles.loginLink}>Sign In</Text>
+              <Text style={styles.loginLink}>Go to Login</Text>
             </TouchableOpacity>
           </View>
         </View>

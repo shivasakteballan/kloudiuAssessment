@@ -59,7 +59,7 @@ export const LoginScreen: React.FC = () => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.formContainer}>
           <Text style={styles.title}>Welcome Back</Text>
-          <Text style={styles.subtitle}>Sign in to your account</Text>
+          <Text style={styles.subtitle}>Login to your account</Text>
 
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Email</Text>
@@ -101,14 +101,14 @@ export const LoginScreen: React.FC = () => {
             disabled={isLoading}
           >
             <Text style={styles.buttonText}>
-              {isLoading ? 'Signing In...' : 'Sign In'}
+              {isLoading ? 'Signing In...' : 'Login'}
             </Text>
           </TouchableOpacity>
 
           <View style={styles.signupContainer}>
             <Text style={styles.signupText}>Don't have an account? </Text>
             <TouchableOpacity onPress={onNavigateToSignup}>
-              <Text style={styles.signupLink}>Sign Up</Text>
+              <Text style={styles.signupLink}>Go to Signup</Text>
             </TouchableOpacity>
           </View>
         </View>

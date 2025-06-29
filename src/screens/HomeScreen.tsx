@@ -39,10 +39,6 @@ export const HomeScreen: React.FC = () => {
             <Text style={styles.label}>Email:</Text>
             <Text style={styles.value}>{user?.email}</Text>
           </View>
-          <View style={styles.userInfo}>
-            <Text style={styles.label}>User ID:</Text>
-            <Text style={styles.value}>{user?.id}</Text>
-          </View>
         </View>
       </View>
     </SafeAreaView>
